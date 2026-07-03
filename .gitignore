@@ -1,0 +1,8 @@
+# Never commit real provider profiles — they hold API tokens
+third-party-review.d/*.env
+!third-party-review.d/*.env.example
+
+# OS / editor junk
+.DS_Store
+*.swp
+*~
