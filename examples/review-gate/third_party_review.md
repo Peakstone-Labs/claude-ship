@@ -1,6 +1,6 @@
 # Review Gate — Third-Party Design Review
 
-**Reviewed by**: Claude (Deepseek-v4-pro)  
+**Reviewed by**: Claude (deepseek)  
 **Date**: 2026-06-19  
 **Source**: `sembr-dev-docs/development/review-gate/design.md`  
 **Cross-referenced against**: `requirements.md`, `sembr/sembr/summarizer/pipeline.py`, `sembr/sembr/db/intents.py`, `sembr/sembr/db/summary_history.py`, `sembr/sembr/models.py`, `sembr/sembr/main.py`, `sembr/sembr/summarizer/llm/base.py`

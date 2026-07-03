@@ -54,7 +54,7 @@
 
 ## Third-Party Review (2026-06-19)
 
-Reviewed by Claude (Deepseek-v4-pro). **7 findings, 6 accepted**:
+Reviewed by Claude (deepseek). **7 findings, 6 accepted**:
 
 | # | Severity | Finding | Disposition |
 |---|----------|---------|-------------|
