@@ -64,7 +64,7 @@ loop-engineering/
 ├── agents/                     # subagent 人格定义(含模型/工具路由)
 ├── templates/development/      # 八个文档模板
 ├── scripts/third-party-review.sh
-├── third-party-review.d/
+├── providers/
 │   └── provider.env.example    # 第三方端点配置模板(真 .env 已 gitignore)
 ├── examples/                   # 一个真实 feature 的七件套走查(建议补充)
 └── install.sh
@@ -84,11 +84,11 @@ cd claude-ship
 
 - **[Claude Code](https://claude.com/claude-code)**(slash 命令 + subagent)。
 - 目标项目建议有一份 **`CLAUDE.md`**,可含 `## Documentation Paths` 段指定 `<DOCS_ROOT>`(缺省 `docs/development`)。所有 agent 的有效性取决于项目上下文的准确度——垃圾进垃圾出。
-- **`/third_party_review` 额外需要**:一个 bash 环境(Windows 用 Git-Bash)+ 一个第三方 provider profile。复制 `third-party-review.d/provider.env.example` 为 `<provider>.env`(如 `deepseek.env`),填入兼容 Anthropic Messages API 的 `ANTHROPIC_BASE_URL` / `ANTHROPIC_AUTH_TOKEN` / `TPR_MODEL`。**真 `.env` 已被 gitignore,切勿提交 token。**
+- **`/third_party_review` 额外需要**:一个 bash 环境(Windows 用 Git-Bash)+ 一个第三方 provider profile。复制 `providers/provider.env.example` 为 `<provider>.env`(如 `deepseek.env`),填入兼容 Anthropic Messages API 的 `ANTHROPIC_BASE_URL` / `ANTHROPIC_AUTH_TOKEN` / `TPR_MODEL`。**真 `.env` 已被 gitignore,切勿提交 token。**
 
 ## 安全
 
-- 仓库不含任何密钥。第三方端点凭证只存在于本地 `third-party-review.d/*.env`(已 gitignore)。
+- 仓库不含任何密钥。第三方端点凭证只存在于本地 `providers/*.env`(已 gitignore)。
 - 文档模板与提示词里的示例已脱敏为通用软件场景。
 
 ## License

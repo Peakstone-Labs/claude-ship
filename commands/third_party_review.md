@@ -10,7 +10,7 @@ argument-hint: <feature-name> [provider: deepseek|kimi]
 
 - **feature**：`$ARGUMENTS` 第一个 token。
 - **provider**：默认 `deepseek`。若用户在参数或对话里指明（"用 kimi" / "deepseek" / "用 flash 档"），据此选：
-  - 可用 profile = `~/.claude/third-party-review.d/*.env`——每个 profile 指向一个**兼容 Anthropic Messages API** 的第三方端点（示例：`deepseek`、`kimi`；你在各自 `.env` 里填 BASE_URL / TOKEN / MODEL）。
+  - 可用 profile = `~/.claude/providers/*.env`——每个 profile 指向一个**兼容 Anthropic Messages API** 的第三方端点（示例：`deepseek`、`kimi`；你在各自 `.env` 里填 BASE_URL / TOKEN / MODEL）。
   - 若用户点名了具体模型档，作为 **model-override** 传第 3 参数（该 profile 支持的某个 model id）。
 
 ## 前置检查
@@ -18,7 +18,7 @@ argument-hint: <feature-name> [provider: deepseek|kimi]
 - 必须先 `cd` 进目标 repo；本命令用 `pwd` 作仓库根。
 - `<DOCS_ROOT>`：读本 repo `CLAUDE.md` 的 `## Documentation Paths` 段；缺失则用默认 `docs/development`。
 - `<DOCS_ROOT>/<feature>/design.md` 不存在 → **停**，提示先 `/architect <feature>` 定稿。
-- 选定 provider 的 profile（`~/.claude/third-party-review.d/<provider>.env`）不存在 → **停**，列出可用 profile。
+- 选定 provider 的 profile（`~/.claude/providers/<provider>.env`）不存在 → **停**，列出可用 profile。
 
 ## 执行
 

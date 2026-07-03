@@ -8,7 +8,7 @@
 # 仍允许 Read/Glob/Grep，模型可按需查看 design 点名的源码（只读，不改任何文件）。
 #
 # 用法： cd 进目标 repo 后  ~/.claude/scripts/third-party-review.sh <feature-name> [provider] [model-override]
-#   provider        : ~/.claude/third-party-review.d/<provider>.env 里的 profile（默认 deepseek；另有 kimi）
+#   provider        : ~/.claude/providers/<provider>.env 里的 profile（默认 deepseek；另有 kimi）
 #   model-override  : 覆盖 profile 的 TPR_MODEL（可选）
 #   TPR_DOCS_ROOT   : env，docs 根相对路径（默认 docs/development）
 set -euo pipefail
@@ -22,7 +22,7 @@ FEATURE_DIR="$REPO_ROOT/$DOCS_ROOT_REL/$FEATURE"
 DESIGN="$FEATURE_DIR/design.md"
 OUT="$FEATURE_DIR/third_party_review.md"
 
-PROFILE_DIR="$HOME/.claude/third-party-review.d"
+PROFILE_DIR="$HOME/.claude/providers"
 CONFIG="$PROFILE_DIR/$PROVIDER.env"
 AGENT_SPEC="$HOME/.claude/agents/third_party_review.md"
 TEMPLATE="$HOME/.claude/templates/development/third_party_review.md"
